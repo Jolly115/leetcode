@@ -1,6 +1,24 @@
 
+fun twoSum(nums:IntArray, target:Int) : IntArray {
+    val map = mutableMapOf<Int,Int>()
+    
+    for (i in nums.indices)
+    {
+        var complement = target-nums[i]
+        if(map.containsKey(complement))
+        	return intArrayOf(i,map[complement]!!)
+        map[nums[i]] = i
+    }
+    return intArrayOf(2,3)
+}
 
-class Solution {
+fun main() {
+    val arr = intArrayOf(7,5,3,4,5)
+    print(twoSum(arr,9).joinToString(","))
+}
+
+
+/*class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
 
@@ -24,3 +42,4 @@ fun main() {
     print(result)
     println(result.joinToString(", "))  // Output: 3, 4
 }
+*/
