@@ -1,0 +1,3 @@
+[submodule "ios/stateAndData"]
+	path = ios/stateAndData
+	url = https://github.com/Jolly115/stateAndData.git
